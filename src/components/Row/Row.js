@@ -16,6 +16,7 @@ const Row = ({
   };
 
   const toggleStar = (event) => {
+    event.stopPropagation();
     if (stars === stargazers_count) setState({ stars: stargazers_count + 1 });
     else setState({ stars: stars - 1 });
     return null;

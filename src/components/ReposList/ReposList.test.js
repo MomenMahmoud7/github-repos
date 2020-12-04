@@ -21,13 +21,13 @@ describe('List component', () => {
   it('renders spinner correctly', () => {
     const list = shallow(<ReposList {...propsLoading} />);
     const spinner = list.find('#spinner');
-    expect(spinner.exists()).toBe(true);
+    expect(spinner.exists()).toBe(propsLoading.loading);
   });
 
   it('renders error correctly', () => {
     const list = shallow(<ReposList {...propsError} />);
     const error = list.find('#error').text();
-    expect(error).toBe('error');
+    expect(error).toBe(propsError.error.message);
   });
 
   it('renders list correctly', () => {

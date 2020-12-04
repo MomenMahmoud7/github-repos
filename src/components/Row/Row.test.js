@@ -16,15 +16,16 @@ describe('Row component', () => {
   it('renders correctly', () => {
     const row = shallow(<Row {...props} />);
 
-    const link = row.find('#link').text();
+    const link = row.find('#link');
     const starsCount = row.find('#starsCount').text();
     const descriptionTitle = row.find('#descriptionTitle').text();
     const description = row.find('#description').text();
 
-    expect(link).toBe('name');
-    expect(starsCount).toBe('0');
+    expect(link.text()).toBe(props.name);
+    expect(link.prop('href')).toBe(props.clone_url);
+    expect(starsCount).toBe(`${props.stargazers_count}`);
     expect(descriptionTitle).toBe('Description');
-    expect(description).toBe('description');
+    expect(description).toBe(props.description);
 
     const header = row.find('#header');
 
@@ -42,12 +43,12 @@ describe('Row component', () => {
 
     const star = row.find('#star');
 
-    star.simulate('doubleclick');
+    star.simulate('doubleclick', { stopPropagation: () => {} });
     const starsCountDC = row.find('#starsCount').text();
-    expect(starsCountDC).toBe('0');
+    expect(starsCountDC).toBe(`${props.stargazers_count}`);
 
-    star.simulate('click');
+    star.simulate('click', { stopPropagation: () => {} });
     const starsCountC = row.find('#starsCount').text();
-    expect(starsCountC).toBe('1');
+    expect(starsCountC).toBe(`${props.stargazers_count + 1}`);
   });
 });
