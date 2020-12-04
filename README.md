@@ -1,6 +1,7 @@
 # Listing Public Github Repos
 
-This project was bootstrapped with [Create React App] and deployed using [Vercel] at https://github-repos-alpha.vercel.app/.
+This project was bootstrapped with [Create React App],  
+Deployed using [Vercel] at https://github-repos-alpha.vercel.app/.
 
 ## Available Scripts
 
