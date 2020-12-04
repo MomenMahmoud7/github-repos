@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5% 0;
+  .controller {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 720px;
+    .filter {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+  }
+  .content {
+    min-height: 360px;
+  }
+}
+
+.pagination {
+  display: flex;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  a {
+    cursor: pointer;
+    outline: unset;
+    color: white;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 0 2px;
+    border-radius: 4px;
+    background:black;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s;
+    &:hover {
+      color: goldenrod;
+    }
+  }
+  .pagination-link-active {
+    a {
+      color: black;
+      background: goldenrod;
+    }
+  }
+  .pagination-link-disabled {
+    a {
+      cursor: not-allowed;
+      color: rgba(255, 255, 255, 0.25);
+      background-color: black !important;
+    }
+  }
+}
+
+
+

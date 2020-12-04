@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  margin-bottom: 2px;
+  .content, .header {
+    display: flex;
+    justify-content: space-between;
+    border: unset;
+    outline: unset;
+    color: white;
+    font-size: 90%;
+    text-align: left;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s;
+    background-color: black;
+    a {
+      font-weight: bold;
+      text-decoration: unset;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      transition: all 0.5s;
+      &:hover {
+        color: goldenrod;
+      }
+    }
+    i {
+      margin: 0 0 0 1rem;
+      transition: all 0.3s;
+    }
+    .star {
+      outline: unset;
+      color: goldenrod;
+      font-size: 125%;
+      &:hover {
+        color: gold;
+      }
+    }
+    .up {
+      transform: rotate(180deg);
+    }
+  }
+  .header {
+    cursor: pointer;
+    border-left: 4px solid goldenrod;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+  }
+  .content {
+    flex-direction: column;
+    padding: 0.75rem 2.5rem 1.25rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.025);
+    h4 {
+      color: goldenrod;
+      margin: 0 0 0.25rem 0;
+    }
+  }
+  .hidden {
+    height: 0;
+    padding: 0 2.5rem;
+    overflow: hidden;
+  }
+}

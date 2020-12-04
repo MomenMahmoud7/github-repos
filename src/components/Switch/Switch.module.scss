@@ -1,0 +1,58 @@
+.ground {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0.5rem;
+  width: 40px;
+  height: 24px;
+  overflow: hidden;
+  box-sizing: content-box;
+  border-radius: 20px;
+  background: black;
+  transition: background-color 0.2s;
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 5rem;
+    height: 5rem;
+    z-index: 100;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .handler {
+    position: absolute;
+    width: 22px !important;
+    height: 22px !important;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background: rgb(30, 30, 30);
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.25);
+  }
+  .active {
+    left: calc(100% - 23px);
+  }
+  .disabled {
+    cursor: not-allowed;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+.checked {
+  background-color: goldenrod;
+}
+.ground:active .handler {
+  width: 24px;
+}
