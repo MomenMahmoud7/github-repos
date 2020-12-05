@@ -7,6 +7,16 @@ Deployed using [Vercel] at https://github-repos-alpha.vercel.app/.
 
 In the project directory, you can run:
 
+### `docker-compose up`
+
+Builds, (re)creates, starts, and attaches to containers for a service.
+You can now view github-repos in the browser.
+  - Local: http://localhost:3000
+
+### `docker-compose down`
+
+Stops containers and removes containers, networks, volumes, and images.
+
 ### `npm start`
 
 Runs the app in the development mode.\
